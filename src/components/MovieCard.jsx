@@ -1,22 +1,24 @@
 import { Card } from "antd";
-import { DETAILS } from "../movieDetails";
+import { Link } from "react-router";
 
 const { Meta } = Card;
-const MovieCard = (props) => {
+const MovieCard = ({ id, titles, descriptions, ratings, photo }) => {
   return (
-    <Card
-      hoverable
-      cover={
-        <img
-          className="w-[600px] h-[300px] object-cover"
-          alt="example"
-          src={props.photo}
-        />
-      }
-    >
-      <Meta title={props.titles} description={props.descriptions} />
-      <p>Rating: {props.ratings}</p>
-    </Card>
+    <Link to={`/movie/${id}`}>
+      <Card
+        hoverable
+        cover={
+          <img
+            className="w-[600px] h-[300px] object-cover"
+            alt="example"
+            src={photo}
+          />
+        }
+      >
+        <Meta title={titles} description={descriptions} />
+        <p>Rating: {ratings}</p>
+      </Card>
+    </Link>
   );
 };
 export default MovieCard;

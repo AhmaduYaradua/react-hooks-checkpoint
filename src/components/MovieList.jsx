@@ -7,6 +7,7 @@ function MovieList(props) {
         return (
           <MovieCard
             key={item.id}
+            id={item.id}
             titles={item.title}
             descriptions={item.description}
             ratings={item.rating}

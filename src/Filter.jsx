@@ -3,6 +3,7 @@ import { useState } from "react";
 import { DETAILS } from "./movieDetails";
 import MovieList from "./components/MovieList";
 import AddMovie from "./components/AddMovie";
+
 function Filter(props) {
   const [movieData, setMovieData] = useState(DETAILS);
 
